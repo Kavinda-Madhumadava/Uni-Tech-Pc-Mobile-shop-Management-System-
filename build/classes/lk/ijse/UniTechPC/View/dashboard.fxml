@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="740.0" prefWidth="1212.0" style="-fx-border-color: #0041eb;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.UniTechPC.Controller.DashboardController">
+   <children>
+      <ImageView fx:id="mainAnchor" fitHeight="740.0" fitWidth="1212.0">
+         <image>
+            <Image url="@../Assest/50-Beautiful-and-Minimalist-Presentation-Backgrounds-08.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="14.0" layoutY="645.0" prefHeight="81.0" prefWidth="1186.0" style="-fx-background-color: #44C7F5; -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <JFXButton fx:id="makeOrderBtn" layoutX="61.0" layoutY="23.0" onAction="#clickMakeOrder" prefHeight="36.0" prefWidth="187.0" style="-fx-border-color: white; -fx-border-radius: 50; -fx-background-radius: 50;" text="Make Order" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" focusAngle="102.09" focusDistance="-0.0714285714285714" radius="0.4166666666666667">
+                     <stops>
+                        <Stop color="#01eede" />
+                        <Stop color="#f8fcfb" offset="0.33783783783783766" />
+                        <Stop color="#5dc9c2" offset="0.7297297297297296" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="manageItem" layoutX="437.0" layoutY="22.0" onAction="#manageItem" onMouseClicked="#clickMangeItem" onMouseEntered="#Item" prefHeight="36.0" prefWidth="187.0" style="-fx-border-color: white; -fx-border-radius: 50; -fx-background-radius: 50;" text="Manage Item" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" focusAngle="102.09" focusDistance="-0.0714285714285714" radius="0.4166666666666667">
+                     <stops>
+                        <Stop color="#01eede" />
+                        <Stop color="#f8fcfb" offset="0.33783783783783766" />
+                        <Stop color="#5dc9c2" offset="0.7297297297297296" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="manageEmployee" layoutX="625.0" layoutY="23.0" onMouseClicked="#clickEmployee" onMouseEntered="#employeeee" prefHeight="36.0" prefWidth="187.0" style="-fx-border-color: white; -fx-border-radius: 50; -fx-background-radius: 50;" text="Manage Employee" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" focusAngle="102.09" focusDistance="-0.0714285714285714" radius="0.4166666666666667">
+                     <stops>
+                        <Stop color="#01eede" />
+                        <Stop color="#f8fcfb" offset="0.33783783783783766" />
+                        <Stop color="#5dc9c2" offset="0.7297297297297296" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="RepairBtn" layoutX="249.0" layoutY="23.0" onMouseClicked="#clickRepairBtn" onMouseEntered="#Repair" prefHeight="36.0" prefWidth="187.0" style="-fx-border-color: white; -fx-border-radius: 50; -fx-background-radius: 50;" text="Repair" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" focusAngle="102.09" focusDistance="-0.0714285714285714" radius="0.4166666666666667">
+                     <stops>
+                        <Stop color="#01eede" />
+                        <Stop color="#f8fcfb" offset="0.33783783783783766" />
+                        <Stop color="#5dc9c2" offset="0.7297297297297296" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton fx:id="orderDetail" layoutX="812.0" layoutY="22.0" onAction="#clickOrderDetails" onMouseEntered="#Order" prefHeight="36.0" prefWidth="187.0" style="-fx-border-color: white; -fx-border-radius: 50; -fx-background-radius: 50;" text="Details" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <ripplerFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" focusAngle="102.09" focusDistance="-0.0714285714285714" radius="0.4166666666666667">
+                     <stops>
+                        <Stop color="#01eede" />
+                        <Stop color="#f8fcfb" offset="0.33783783783783766" />
+                        <Stop color="#5dc9c2" offset="0.7297297297297296" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </ripplerFill>
+            </JFXButton>
+            <ImageView fx:id="dashboardExit" fitHeight="46.0" fitWidth="46.0" focusTraversable="true" layoutX="1129.0" layoutY="17.0" onMouseClicked="#clickDashboardExoit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assest/Off.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <ImageView fx:id="Logout" fitHeight="46.0" fitWidth="52.0" focusTraversable="true" layoutX="1056.0" layoutY="17.0" onMouseClicked="#clickLogout" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assest/exit-512.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </ImageView>
+            <Separator layoutX="1025.0" layoutY="18.0" orientation="VERTICAL" prefHeight="46.0" prefWidth="6.0" />
+         </children></AnchorPane>
+      <AnchorPane fx:id="DashBoardAncher" layoutX="14.0" layoutY="17.0" prefHeight="623.0" prefWidth="1186.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;">
+         <children>
+            <Label fx:id="orderID" layoutX="844.0" layoutY="12.0" prefHeight="18.0" prefWidth="155.0" text="Order ID" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="dateLBL" layoutX="1001.0" layoutY="12.0" prefHeight="45.0" prefWidth="175.0" text="2018-07-25" textFill="#0041eb">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="brandCombo" focusColor="#44c7f5" layoutX="18.0" layoutY="20.0" onAction="#ClickloadBrands" prefHeight="28.0" prefWidth="187.0" promptText="Select Brand" unFocusColor="BLACK">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXComboBox>
+            <JFXTextField fx:id="Description" layoutX="228.0" layoutY="19.0" onAction="#Description" prefHeight="26.0" prefWidth="187.0" promptText="Description" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="pricetTXTXXX" layoutX="441.0" layoutY="19.0" onAction="#priceTXT" prefHeight="26.0" prefWidth="187.0" promptText="Price" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <Separator layoutY="368.0" prefHeight="0.0" prefWidth="1186.0" />
+            <Label fx:id="CustomerID" layoutX="1129.0" layoutY="535.0" prefHeight="22.0" prefWidth="34.0" text="Customer ID" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="CustomerNIC" layoutX="13.0" layoutY="410.0" onAction="#customerNIC" prefHeight="30.0" prefWidth="353.0" promptText="NIC" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="CustomerName" layoutX="12.0" layoutY="465.0" onAction="#CustomerName" prefHeight="30.0" prefWidth="353.0" promptText="Customer Name" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="CustomerAddress" layoutX="12.0" layoutY="520.0" onAction="#custAddres" prefHeight="30.0" prefWidth="353.0" promptText="Customer Address" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="CustomerContact" layoutX="12.0" layoutY="574.0" onAction="#custContact" prefHeight="30.0" prefWidth="353.0" promptText="Customer Contact" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="amount" layoutX="427.0" layoutY="519.0" onAction="#amount" prefHeight="30.0" prefWidth="276.0" promptText="Amount" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="986.0" layoutY="571.0" onAction="#placeOrder" prefHeight="36.0" prefWidth="143.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #0041eb;" text="Place Order" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8faff" />
+                        <Stop color="#f8faff" offset="0.19256756756756757" />
+                        <Stop color="#0041eb" offset="0.36466165413533835" />
+                        <Stop color="#0041eb" offset="0.537593984962406" />
+                        <Stop color="WHITE" offset="0.7819548872180451" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <JFXButton layoutX="823.0" layoutY="571.0" prefHeight="36.0" prefWidth="143.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: red;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#d7c8c8" />
+                        <Stop color="#d7c8c8" offset="0.007518796992481203" />
+                        <Stop color="#d6c9c9" offset="0.1690205242836821" />
+                        <Stop color="#d4c9c9" offset="0.20608108108108109" />
+                        <Stop color="#d7c8c8" offset="0.3330623856939646" />
+                        <Stop color="#f20101" offset="0.5827067669172928" />
+                        <Stop color="WHITE" offset="0.8796992481203006" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <Label fx:id="price" layoutX="425.0" layoutY="469.0" prefHeight="22.0" prefWidth="276.0" text="Price" textFill="#0041eb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="description" layoutX="425.0" layoutY="429.0" prefHeight="22.0" prefWidth="276.0" text="Description" textFill="#0041eb">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TableView fx:id="ItemTBL" layoutX="14.0" layoutY="64.0" onMouseClicked="#clickRow" prefHeight="297.0" prefWidth="1163.0" style="-fx-border-color: #0041eb;" stylesheets="@style/Tables.css">
+              <columns>
+                <TableColumn prefWidth="167.0" text="Item Code" />
+                <TableColumn prefWidth="314.0" text="Brand" />
+                  <TableColumn prefWidth="349.0" text="Description" />
+                  <TableColumn prefWidth="201.0" text="Price" />
+                  <TableColumn prefWidth="128.0" text="QTY  On Hand" />
+              </columns>
+               <styleClass>
+                  <String fx:value="table-cell" />
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="table-view" />
+               </styleClass>
+            </TableView>
+            <Label fx:id="itemCode" layoutX="1065.0" layoutY="535.0" prefHeight="22.0" prefWidth="46.0" text="Item Code" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="Today" layoutX="802.0" layoutY="382.0" prefHeight="120.0" prefWidth="119.0" text="21" textFill="#eb0000">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Label layoutX="802.0" layoutY="506.0" prefHeight="22.0" prefWidth="119.0" text="Today  Orders" textFill="#eb0000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="818.0" layoutY="17.0" onAction="#clcikReload" prefHeight="34.0" prefWidth="143.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: green;" text="Reload" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#d7c8c8" />
+                        <Stop color="#d7c8c8" offset="0.007518796992481203" />
+                        <Stop color="#d6c9c9" offset="0.1690205242836821" />
+                        <Stop color="#d4c9c9" offset="0.20608108108108109" />
+                        <Stop color="#d7c8c8" offset="0.3330623856939646" />
+                        <Stop color="#f20101" offset="0.5827067669172928" />
+                        <Stop color="WHITE" offset="0.8796992481203006" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <Separator layoutX="744.0" layoutY="418.0" orientation="VERTICAL" prefHeight="177.0" prefWidth="6.0" />
+            <Separator layoutX="409.0" layoutY="421.0" orientation="VERTICAL" prefHeight="177.0" prefWidth="6.0" />
+            <Separator layoutX="972.0" layoutY="415.0" orientation="VERTICAL" prefHeight="106.0" prefWidth="6.0" />
+            <Label fx:id="AllOrders" layoutX="1016.0" layoutY="382.0" prefHeight="120.0" prefWidth="119.0" text="21" textFill="#eb0000">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Label layoutX="1016.0" layoutY="505.0" prefHeight="22.0" prefWidth="119.0" text="All Orders" textFill="#eb0000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator layoutX="979.0" layoutY="10.0" orientation="VERTICAL" prefHeight="46.0" prefWidth="6.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

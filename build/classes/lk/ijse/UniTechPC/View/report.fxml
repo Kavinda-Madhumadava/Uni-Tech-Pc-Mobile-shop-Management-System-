@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="1186.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.UniTechPC.Controller.ReportController">
+   <children>
+      <Label fx:id="ReportLBL" layoutX="376.0" layoutY="26.0" prefHeight="52.0" prefWidth="524.0" text="Uni-Tech PC Business Reports" textFill="#0041eb">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="154.0" fitWidth="147.0" layoutX="833.0" layoutY="148.0" onMouseClicked="#clickRepair" onMouseEntered="#eneterRepair" onMouseExited="#exitRepair" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assest/AppleCellPhoneRepair300xy.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="154.0" fitWidth="147.0" layoutX="184.0" layoutY="148.0" onMouseClicked="#ClickItems" onMouseEntered="#eneterRepair" onMouseExited="#exitRepair" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assest/blue-mobile-phone-round-icon-search-engine-12627.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="154.0" fitWidth="147.0" layoutX="514.0" layoutY="148.0" onMouseClicked="#clickOrdersIncome" onMouseEntered="#eneterRepair" onMouseExited="#exitRepair" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assest/banking_service-512.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label layoutX="187.0" layoutY="295.0" text="Item Details">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="500.0" layoutY="295.0" text="Income Details">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="800.0" layoutY="295.0" text="Hand Over Details">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="154.0" fitWidth="147.0" layoutX="514.0" layoutY="369.0" onMouseClicked="#clickCustomer" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assest/invoice-3-153512.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow />
+         </effect>
+      </ImageView>
+      <Label layoutX="487.0" layoutY="516.0" text="Customer Details">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Uni_Tech_PC" pageWidth="705" pageHeight="842" columnWidth="665" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="de4cdca7-3c5f-43d0-9ee9-409071e5f0a3">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (2)"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<queryString>
+		<![CDATA[select Customer_Name,Mobile_Name,Repair_Fault,R_Price,reg_Date from Customer c,Handover h where c.Cid=h.Cid]]>
+	</queryString>
+	<field name="Customer_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Customer_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Customer"/>
+	</field>
+	<field name="Mobile_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Mobile_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Handover"/>
+	</field>
+	<field name="Repair_Fault" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Repair_Fault"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Handover"/>
+	</field>
+	<field name="R_Price" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="R_Price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Handover"/>
+	</field>
+	<field name="reg_Date" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="reg_Date"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Handover"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="53" splitType="Stretch">
+			<staticText>
+				<reportElement x="220" y="10" width="230" height="30" forecolor="#0041EB" uuid="f5e652ec-1001-44e8-9051-4aedaf251bc6"/>
+				<textElement>
+					<font size="26"/>
+				</textElement>
+				<text><![CDATA[Repair Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="111" height="30" forecolor="#FF0400" uuid="b483186b-5be5-4cac-b1f7-59bd54241218">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db2e9357-4f67-4bce-afdb-abbad1f9b314"/>
+				</reportElement>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Custome Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="120" y="0" width="111" height="30" forecolor="#FF0400" uuid="b4799b77-2f92-4346-b8cf-e76522ce45eb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1f846787-abed-40fa-a295-e09390ac1dd1"/>
+				</reportElement>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Mobile Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="0" width="111" height="30" forecolor="#FF0400" uuid="04a5a796-2006-40ae-9a52-f87b282535b1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7f7a166d-4e23-4f63-8990-46f46fd49774"/>
+				</reportElement>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Repair Fault]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="410" y="0" width="111" height="30" forecolor="#FF0400" uuid="be7791cd-76c9-454f-84b7-4cb498cbb248">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fabdf864-5d5b-4c4e-9717-343bf21654fd"/>
+				</reportElement>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Repair Cost]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="0" width="111" height="30" forecolor="#FF0400" uuid="c04eadfc-72bc-4203-bec5-039c084da7d5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="10e9517c-e55a-4179-b969-882da9da628c"/>
+				</reportElement>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<text><![CDATA[Handover Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="111" height="30" uuid="5463b34d-dfaa-46cc-a957-f0a548fbe0d3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="db2e9357-4f67-4bce-afdb-abbad1f9b314"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Customer_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="120" y="0" width="111" height="30" uuid="d75609c5-75c2-41f5-8731-7fd25e351178">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1f846787-abed-40fa-a295-e09390ac1dd1"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Mobile_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="0" width="111" height="30" uuid="625c7f12-820a-4dae-952f-3ed8b2cda105">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7f7a166d-4e23-4f63-8990-46f46fd49774"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Repair_Fault}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="410" y="0" width="111" height="30" uuid="e729eb77-baf4-43f0-a25b-28a6f38ac5a3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fabdf864-5d5b-4c4e-9717-343bf21654fd"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{R_Price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="560" y="0" width="111" height="30" uuid="5cd4858c-b9d3-4e0b-9d78-af77bda5c750">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="10e9517c-e55a-4179-b969-882da9da628c"/>
+				</reportElement>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reg_Date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="OrderDetails" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f000df52-518b-4f3f-86d5-8b980cbf138c">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DA"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select Customer_Name,Description,Total from Customer c,Item i,Order_Details od where i.Item_Code=od.Item_Code ]]>
+	</queryString>
+	<field name="Customer_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Customer_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Customer"/>
+	</field>
+	<field name="Description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Item"/>
+	</field>
+	<field name="Total" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="Total"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Order_Details"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="58" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="20" width="174" height="30" forecolor="#0041EB" uuid="08682bee-df72-4f13-9645-6b9a94c96abe"/>
+				<textElement>
+					<font size="25"/>
+				</textElement>
+				<text><![CDATA[Order Details]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="60" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="185" height="30" forecolor="#FF0400" uuid="5b36d4cf-fdea-4570-aa4c-15445e7fffc8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="596c8703-73e7-4eed-84f3-690c03a730b0"/>
+				</reportElement>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Customer_Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="185" y="0" width="185" height="30" forecolor="#FF0400" uuid="20eb4337-e117-47ad-a1d8-f4d38f99ddc9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3a52db6a-4db9-46f9-87c4-4b56f8c62b58"/>
+				</reportElement>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="0" width="185" height="30" forecolor="#FF0400" uuid="b3330b84-27eb-470c-b49b-14966320e9e4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="154a0294-c459-460c-8c43-90f92d1502d7"/>
+				</reportElement>
+				<textElement>
+					<font size="20"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="73" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="185" height="30" uuid="b9a92f25-5adf-4dc5-aa66-1ff1d7bb2f72">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="596c8703-73e7-4eed-84f3-690c03a730b0"/>
+				</reportElement>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Customer_Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="185" y="0" width="185" height="30" uuid="a4c7aff0-6c79-498c-a61b-5a924e2d37df">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3a52db6a-4db9-46f9-87c4-4b56f8c62b58"/>
+				</reportElement>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="185" height="30" uuid="77deab27-d430-464f-a19a-01c677875bbc">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="154a0294-c459-460c-8c43-90f92d1502d7"/>
+				</reportElement>
+				<textElement>
+					<font size="15"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

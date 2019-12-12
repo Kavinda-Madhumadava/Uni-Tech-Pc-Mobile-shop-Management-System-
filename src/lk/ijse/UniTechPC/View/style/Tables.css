@@ -1,0 +1,23 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.table-view .table-row-cell:filled:hover{
+    -fx-cursor:hand;
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, white 0%, #18ffff 50%, white 100%);
+}
+
+.table-row-cell:selected{
+    -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, white 0%, #ffd740  50%, white 100%);
+}
+
+.table-row-cell:selected .table-cell{
+    -fx-text-fill: black !important;
+}
+
+.button :hover{
+    -fx-background-color: #18ffff;
+    -fx-border-radius: 10px;
+    
+}
+

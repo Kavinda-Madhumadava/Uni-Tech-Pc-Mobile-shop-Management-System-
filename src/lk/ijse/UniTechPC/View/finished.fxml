@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="finishedAnchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="1186.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.UniTechPC.Controller.FinishedController">
+   <children>
+      <Label layoutX="28.0" layoutY="12.0" prefHeight="18.0" prefWidth="155.0" text="Finished ID" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="1001.0" layoutY="12.0" prefHeight="45.0" prefWidth="171.0" text="2018-07-24" textFill="#0041eb">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Separator layoutY="342.0" prefHeight="0.0" prefWidth="1186.0" />
+      <JFXButton layoutX="517.0" layoutY="300.0" onMouseClicked="#clickRepaiDone" prefHeight="36.0" prefWidth="189.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #0041eb;" text="Repair Done" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="finishedTBL" layoutX="12.0" layoutY="60.0" prefHeight="225.0" prefWidth="1163.0" style="-fx-border-color: #0041eb;" stylesheets="@style/Tables.css">
+         <columns>
+            <TableColumn prefWidth="122.0" text="RID" />
+            <TableColumn minWidth="0.0" prefWidth="114.0" text="Cid " />
+            <TableColumn prefWidth="253.0" text="Mobile_Name " />
+            <TableColumn prefWidth="229.0" text="Repair_Fault " />
+            <TableColumn prefWidth="291.0" text="R_Price" />
+            <TableColumn prefWidth="149.0" text="reg_Date" />
+         </columns>
+         <styleClass>
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+      <JFXTextField fx:id="contact" layoutX="16.0" layoutY="13.0" onAction="#actionContact" prefHeight="30.0" prefWidth="276.0" promptText="Customer Contact" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField layoutX="14.0" layoutY="352.0" prefHeight="30.0" prefWidth="276.0" promptText="Customer Contact" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="983.0" layoutY="354.0" onMouseClicked="#clickHandOver" prefHeight="36.0" prefWidth="189.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: orange;" text="Hand Over" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <TableView fx:id="HandOverTBL" layoutX="12.0" layoutY="396.0" prefHeight="213.0" prefWidth="1163.0" style="-fx-border-color: #0041eb;" stylesheets="@style/Tables.css">
+         <columns>
+            <TableColumn prefWidth="104.0" text="Fid" />
+            <TableColumn minWidth="0.0" prefWidth="107.0" text="Rid" />
+            <TableColumn prefWidth="122.0" text="Cid" />
+            <TableColumn prefWidth="223.0" text="Mobile Name" />
+            <TableColumn prefWidth="231.0" text="Repair Fault" />
+            <TableColumn prefWidth="184.0" text="Price" />
+            <TableColumn prefWidth="189.0" text="Reg Date" />
+         </columns>
+         <styleClass>
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+   </children>
+</AnchorPane>

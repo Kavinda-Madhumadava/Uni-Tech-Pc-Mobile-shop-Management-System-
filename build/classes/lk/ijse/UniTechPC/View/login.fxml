@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="385.0" prefWidth="850.0" style="-fx-background-color: #44C7F5; -fx-border-color: #44C7F5;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.UniTechPC.Controller.LoginController">
+   <children>
+      <AnchorPane layoutX="400.0" prefHeight="385.0" prefWidth="450.0" style="-fx-background-color: white; -fx-border-color: #44C7F5;">
+         <children>
+            <ImageView fx:id="loginExit" fitHeight="33.0" fitWidth="45.0" layoutX="390.0" layoutY="17.0" onMouseClicked="#clickLoginExit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Assest/Off.png" />
+               </image>
+               <effect>
+                  <DropShadow />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="14.0" layoutY="61.0" prefHeight="33.0" prefWidth="216.0" text="Login" textFill="#44c7f5">
+               <font>
+                  <Font name="Lohit Devanagari" size="25.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="userNameTXT" focusColor="WHITE" focusTraversable="false" layoutX="28.0" layoutY="145.0" onAction="#enterUserName" prefHeight="45.0" prefWidth="375.0" promptText="Username" style="-fx-text-fill: #0041eb;" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </JFXTextField>
+            <JFXPasswordField fx:id="passwordTXt" focusColor="WHITE" focusTraversable="false" layoutX="28.0" layoutY="216.0" prefHeight="26.0" prefWidth="375.0" promptText="Password" style="-fx-text-fill: #0041eb;" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </JFXPasswordField>
+            <JFXButton fx:id="loginBtn" focusTraversable="false" layoutX="241.0" layoutY="304.0" onMouseClicked="#clickLoginBtn" prefHeight="36.0" prefWidth="162.0" style="-fx-border-color: #44C7F5; -fx-background-radius: 10; -fx-border-radius: 10;" text="Login" textFill="#44c7f5">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <Label layoutX="14.0" layoutY="35.0" prefHeight="116.0" prefWidth="180.0" text="Uni" textFill="WHITE">
+         <font>
+            <Font name="DejaVu Sans Bold" size="64.0" />
+         </font>
+      </Label>
+      <Label layoutX="143.0" layoutY="85.0" prefHeight="45.0" prefWidth="180.0" text="Tech PC" textFill="#0041eb">
+         <font>
+            <Font name="Lucida Sans Demibold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="111.0" prefHeight="36.0" prefWidth="216.0" text="Mobile selling &amp; Repairing" textFill="WHITE">
+         <font>
+            <Font name="Noto Naskh Arabic Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="DateLBL" layoutX="14.0" layoutY="14.0" prefHeight="36.0" prefWidth="156.0" text="2018/10/15" textFill="WHITE">
+         <font>
+            <Font name="Noto Sans CJK TC Thin" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="timeLBL" layoutX="236.0" layoutY="14.0" prefHeight="36.0" prefWidth="156.0" text="15:15 pm" textFill="WHITE">
+         <font>
+            <Font name="Noto Sans CJK TC Thin" size="20.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="242.0" fitWidth="391.0" layoutX="4.0" layoutY="139.0">
+         <image>
+            <Image url="@../Assest/giphy.gif" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

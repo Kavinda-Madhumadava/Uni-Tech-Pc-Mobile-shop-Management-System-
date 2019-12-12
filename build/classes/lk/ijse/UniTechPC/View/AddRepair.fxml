@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="RepairAnchor" prefHeight="623.0" prefWidth="1186.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.UniTechPC.Controller.AddRepairController">
+   <children>
+      <Label fx:id="dtaeLBL" layoutX="695.0" layoutY="180.0" prefHeight="25.0" prefWidth="69.0" text="Date" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Separator layoutY="273.0" prefHeight="0.0" prefWidth="1186.0" />
+      <Label fx:id="customerID" layoutX="611.0" layoutY="181.0" prefHeight="22.0" prefWidth="81.0" text="CustomerID" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="CustomerNIC" layoutX="17.0" layoutY="24.0" onAction="#CustomerNIC" prefHeight="30.0" prefWidth="377.0" promptText="NIC" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="customerName" layoutX="16.0" layoutY="79.0" onAction="#CustomerName" prefHeight="30.0" prefWidth="377.0" promptText="Customer Name" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="customerAddress" layoutX="16.0" layoutY="134.0" onAction="#CustomerAddress" prefHeight="30.0" prefWidth="377.0" promptText="Customer Address" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="customerContact" layoutX="16.0" layoutY="188.0" onAction="#CustomerContact" prefHeight="30.0" prefWidth="377.0" promptText="Customer Contact" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="657.0" layoutY="222.0" onAction="#AddRepair" onMouseClicked="#clickAddRepair" prefHeight="36.0" prefWidth="136.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: blue;" text=" Add To Repair" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton layoutX="505.0" layoutY="222.0" onAction="#CancelRepair" prefHeight="36.0" prefWidth="136.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: red;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="finished" layoutX="1032.0" layoutY="223.0" onMouseClicked="#clickedFinished" prefHeight="36.0" prefWidth="136.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: green;" text="Finished" textFill="WHITE">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="repairMobile" layoutX="441.0" layoutY="25.0" onAction="#RepairMobile" prefHeight="30.0" prefWidth="377.0" promptText="Mobile phone" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="repairDescription" layoutX="443.0" layoutY="79.0" onAction="#Description" prefHeight="30.0" prefWidth="377.0" promptText="Description" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="Cost" layoutX="442.0" layoutY="136.0" onAction="#Price" prefHeight="30.0" prefWidth="377.0" promptText="Price" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="repairTBL" layoutX="16.0" layoutY="282.0" prefHeight="323.0" prefWidth="1157.0" style="-fx-border-color: #0041eb;" stylesheets="@style/Tables.css">
+        <columns>
+          <TableColumn prefWidth="114.0" text="Repair ID" />
+          <TableColumn minWidth="0.0" prefWidth="135.0" text="Customer ID" />
+            <TableColumn prefWidth="221.0" text="Mobile" />
+            <TableColumn prefWidth="274.0" text="Decription" />
+            <TableColumn prefWidth="233.0" text="Price" />
+            <TableColumn prefWidth="178.0" text="Date" />
+        </columns>
+         <styleClass>
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+      <Label fx:id="ridLBL" layoutX="511.0" layoutY="179.0" prefHeight="18.0" prefWidth="113.0" text="Repair ID" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="TodayRepair" layoutX="976.0" layoutY="24.0" prefHeight="120.0" prefWidth="119.0" text="21" textFill="#eb0000">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+      <Label layoutX="976.0" layoutY="147.0" prefHeight="22.0" prefWidth="119.0" text="Today Repairs" textFill="#eb0000">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Separator layoutX="897.0" layoutY="30.0" orientation="VERTICAL" prefHeight="177.0" prefWidth="6.0" />
+   </children>
+</AnchorPane>

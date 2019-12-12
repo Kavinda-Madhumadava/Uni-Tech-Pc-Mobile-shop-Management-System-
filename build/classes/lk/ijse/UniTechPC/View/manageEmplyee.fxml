@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="623.0" prefWidth="1186.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.UniTechPC.Controller.ManageEmplyeeController">
+   <children>
+      <AnchorPane prefHeight="623.0" prefWidth="1186.0">
+         <children>
+            <JFXTextField layoutX="18.0" layoutY="237.0" prefHeight="30.0" prefWidth="276.0" promptText="Employee ID" unFocusColor="BLACK">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="349.0" layoutY="98.0" onAction="#ClickRemove" onMouseClicked="#clickRemove" prefHeight="36.0" prefWidth="170.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: red;" text="Remove" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8faff" />
+                        <Stop color="#f8faff" offset="0.19256756756756757" />
+                        <Stop color="#0041eb" offset="0.36466165413533835" />
+                        <Stop color="#0041eb" offset="0.537593984962406" />
+                        <Stop color="WHITE" offset="0.7819548872180451" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <TableView fx:id="EmployeeTable" layoutX="14.0" layoutY="285.0" prefHeight="321.0" prefWidth="1156.0" style="-fx-border-color: #0041eb;" stylesheets="@style/Tables.css">
+               <columns>
+                  <TableColumn prefWidth="97.0" text="Employee ID" />
+                  <TableColumn prefWidth="169.0" text="Name" />
+                  <TableColumn prefWidth="283.0" text="NIC" />
+                  <TableColumn prefWidth="349.0" text="Address" />
+                  <TableColumn prefWidth="254.0" text="Date" />
+               </columns>
+               <styleClass>
+                  <String fx:value="table-cell" />
+                  <String fx:value="table-row-cell" />
+                  <String fx:value="table-view" />
+               </styleClass>
+            </TableView>
+            <JFXButton fx:id="addBtn" layoutX="540.0" layoutY="98.0" onAction="#clickAddEmployee" onMouseClicked="#clickAddBtn" prefHeight="36.0" prefWidth="170.0" style="-fx-border-radius: 10; -fx-background-radius: 10; -fx-background-color: #0041eb;" text="Add New Employee" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <ripplerFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#f8faff" />
+                        <Stop color="#f8faff" offset="0.19256756756756757" />
+                        <Stop color="#0041eb" offset="0.36466165413533835" />
+                        <Stop color="#0041eb" offset="0.537593984962406" />
+                        <Stop color="WHITE" offset="0.7819548872180451" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </ripplerFill>
+            </JFXButton>
+            <Label fx:id="count" layoutX="793.0" layoutY="48.0" prefHeight="120.0" prefWidth="119.0" text="21" textFill="#eb0000">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Label layoutX="793.0" layoutY="171.0" prefHeight="22.0" prefWidth="119.0" text="Employees" textFill="#eb0000">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Separator layoutX="758.0" layoutY="24.0" orientation="VERTICAL" prefHeight="177.0" prefWidth="6.0" />
+            <Label fx:id="EmployeeID" layoutX="1094.0" layoutY="105.0" prefHeight="25.0" prefWidth="49.0" text="E001" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+      <Label fx:id="dateLBL" layoutX="989.0" layoutY="12.0" prefHeight="45.0" prefWidth="170.0" text="2018-02-02" textFill="#0041eb">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="employeeName" layoutX="15.0" layoutY="78.0" prefHeight="30.0" prefWidth="276.0" promptText="Employee Name" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="nicLbl" layoutX="15.0" layoutY="31.0" onAction="#enterNIC" prefHeight="30.0" prefWidth="276.0" promptText="Employee NIC" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="EmployeeAddress" layoutX="15.0" layoutY="135.0" prefHeight="30.0" prefWidth="276.0" promptText="Employee Address" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <Separator layoutY="221.0" prefHeight="0.0" prefWidth="1186.0" />
+      <JFXTextField layoutX="620.0" layoutY="237.0" prefHeight="30.0" prefWidth="276.0" promptText="Employee Name" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField layoutX="317.0" layoutY="237.0" prefHeight="30.0" prefWidth="276.0" promptText="Employee NIC" unFocusColor="BLACK">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>
